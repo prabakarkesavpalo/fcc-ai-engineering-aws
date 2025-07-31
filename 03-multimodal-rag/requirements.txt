@@ -1,24 +1,37 @@
-# Core dependencies for Multimodal RAG with Amazon Bedrock Nova
-boto3>=1.34.0
-botocore>=1.34.0
-langchain>=0.1.0
-langchain-aws>=0.1.0
-langchain-community>=0.2.17
+# Core dependencies for Multimodal RAG with LOCAL setup (Google Gemini + PostgreSQL)
 
-# PDF Processing
+# Database and vector storage
+psycopg2-binary>=2.9.10
+pgvector>=0.4.1
+
+# Google Gemini API
+google-generativeai>=0.8.5
+
+# PDF and document processing
 PyMuPDF>=1.24.0
 tabula-py>=2.9.0
 
-# Vector Search
-faiss-cpu>=1.8.0
+# Text processing and splitting
+langchain-text-splitters>=0.3.9
 
-# Utilities
-numpy>=1.24.0
-tqdm>=4.66.0
-requests>=2.31.0
+# Scientific computing and utilities
+numpy>=2.3.2
+tqdm>=4.67.1
+requests>=2.32.4
+pandas>=2.3.1
+
+# Environment and configuration
 python-dotenv>=1.0.0
 
-# Jupyter Support
-ipython>=8.12.0
+# Jupyter notebook support
+ipython>=9.4.0
 jupyter>=1.1.1
 notebook>=7.3.2
+
+# Original AWS dependencies (commented out for local setup)
+# boto3>=1.34.0
+# botocore>=1.34.0
+# langchain>=0.1.0
+# langchain-aws>=0.1.0
+# langchain-community>=0.2.17
+# faiss-cpu>=1.8.0  # Not needed for PostgreSQL+pgvector setup
